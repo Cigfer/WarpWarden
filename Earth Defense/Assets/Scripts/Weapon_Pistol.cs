@@ -10,7 +10,7 @@ public class Weapon_Pistol : MonoBehaviour {
     public int maxAmmo = 10;
     private int currentAmmo;
     public float reloadTime = 1f;
-    private bool isReloading = false;
+    public bool isReloading = false;
 
     //public GameObject Bullet_Emitter;
     //public GameObject Bullet;
@@ -24,6 +24,10 @@ public class Weapon_Pistol : MonoBehaviour {
 
     private float nextTimeToFire = 0f;
 
+    private Vector3 originalPosition;
+    public Vector3 aimPosition;
+    public float adsSpeed = 8f;
+
     //public AudioSource shootSource;
     //public AudioClip shootClip;
 
@@ -34,6 +38,7 @@ public class Weapon_Pistol : MonoBehaviour {
         //shootSource.clip = shootClip;
 
         currentAmmo = maxAmmo;
+        originalPosition = transform.localPosition;
     }
 
     void OnEnable()
@@ -59,6 +64,16 @@ public class Weapon_Pistol : MonoBehaviour {
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+        }
+
+        if (Input.GetButton("Fire2") && !isReloading)
+        {
+            Debug.Log("AIMING");
+            transform.localPosition = Vector3.Lerp(transform.localPosition, aimPosition, Time.deltaTime * adsSpeed);
+        }
+        else
+        {
+            transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition, Time.deltaTime * adsSpeed);
         }
 
         /*if (Input.GetButtonDown("Fire2"))
@@ -110,6 +125,19 @@ public class Weapon_Pistol : MonoBehaviour {
         }
 
     }
+
+    /*private void AimDownSights()
+        {
+            if (Input.GetButton("Fire2") && !isReloading)
+            {
+                Debug.Log("AIMING");
+                transform.localPosition = Vector3.Lerp(transform.localPosition, aimPosition, Time.deltaTime * adsSpeed);
+            }
+            else
+            {
+                transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition, Time.deltaTime * adsSpeed);
+            }
+        }*/
 
     /*void SecFire()
     {

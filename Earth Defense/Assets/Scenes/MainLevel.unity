@@ -303,7 +303,7 @@ Prefab:
       objectReference: {fileID: 123721797}
     - target: {fileID: 1904844213569474, guid: 305b649a706395443b3f7ff90b04e124, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4034749260281120, guid: 305b649a706395443b3f7ff90b04e124, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -374,6 +374,20 @@ Prefab:
         type: 2}
       propertyPath: reloadTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114153976315410888, guid: 305b649a706395443b3f7ff90b04e124,
+        type: 2}
+      propertyPath: aimPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114153976315410888, guid: 305b649a706395443b3f7ff90b04e124,
+        type: 2}
+      propertyPath: aimPosition.z
+      value: 0.205
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221072818490366, guid: 305b649a706395443b3f7ff90b04e124, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95979349947515514, guid: 305b649a706395443b3f7ff90b04e124, type: 2}
@@ -863,6 +877,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: 0
+  pistolMotor: {fileID: 1908585926}
+  smgMotor: {fileID: 2018388422}
+  heavyMotor: {fileID: 768232445}
+  sniperMotor: {fileID: 2103312691}
 --- !u!1 &689783024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,6 +1166,12 @@ Transform:
   m_Father: {fileID: 2085964988}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &768232445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114370210613822608, guid: e56e30c9c2c0ece4ab043044fc1228ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 821455485}
+  m_Script: {fileID: 11500000, guid: 022d915d235b5a94ca41a991c91781ec, type: 3}
 --- !u!1 &775951670
 GameObject:
   m_ObjectHideFlags: 0
@@ -3742,6 +3766,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1908585926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114153976315410888, guid: 305b649a706395443b3f7ff90b04e124,
+    type: 2}
+  m_PrefabInternal: {fileID: 171116482}
+  m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
 --- !u!1001 &1935860932
 Prefab:
   m_ObjectHideFlags: 0
@@ -3828,6 +3858,10 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 2103312690}
+    - target: {fileID: 1955950179128708, guid: 0e892a9ae36438b4ba5274461327b301, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e892a9ae36438b4ba5274461327b301, type: 2}
   m_IsPrefabAsset: 0
@@ -4100,6 +4134,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003140317}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2018388422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114709706382980438, guid: e473f2569d173c9469c39deb345c862d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1304710616}
+  m_Script: {fileID: 11500000, guid: 78205d63f1a0635478d77174ef4b1527, type: 3}
 --- !u!1 &2085964987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,3 +4197,9 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2103312691 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114409738583794486, guid: 0e892a9ae36438b4ba5274461327b301,
+    type: 2}
+  m_PrefabInternal: {fileID: 1935860932}
+  m_Script: {fileID: 11500000, guid: 21b51fcb0c395f64fb865325692d6ee9, type: 3}

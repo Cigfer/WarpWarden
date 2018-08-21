@@ -6,6 +6,10 @@ public class WepSwitch : MonoBehaviour {
 
     public int currentWeapon = 0;
 
+    public Weapon_Pistol pistolMotor;
+    public Weapon_SMG smgMotor;
+    public Weapon_Heavy heavyMotor;
+    public Weapon_Sniper sniperMotor;
 
     void Start ()
     {
@@ -16,46 +20,192 @@ public class WepSwitch : MonoBehaviour {
     {
         int previousSelectedWeapon = currentWeapon;
 
-        //above 0 is scroll up, below 0 is scroll down
-		if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        Debug.Log(pistolMotor.isReloading);
+
+        if (pistolMotor.isReloading == false)
         {
-            //wraps around if more than childcount
-            if (currentWeapon >= transform.childCount - 1)
+            //above 0 is scroll up, below 0 is scroll down
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                //wraps around if more than childcount
+                if (currentWeapon >= transform.childCount - 1)
+                    currentWeapon = 0;
+                else
+                    currentWeapon++;
+            }
+            if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+                if (currentWeapon <= 0)
+                    currentWeapon = transform.childCount - 1;
+                else
+                    currentWeapon--;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
                 currentWeapon = 0;
-            else
-                currentWeapon++;
-        }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-        {
-            if (currentWeapon <= 0)
-                currentWeapon = transform.childCount -1;
-            else
-                currentWeapon--;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+            {
+                currentWeapon = 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
+            {
+                currentWeapon = 2;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4)
+            {
+                currentWeapon = 3;
+            }
+
+            if (previousSelectedWeapon != currentWeapon)
+            {
+                SelectWeapon();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (smgMotor.isReloading == false)
         {
-            currentWeapon = 0;
+
+            //above 0 is scroll up, below 0 is scroll down
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                //wraps around if more than childcount
+                if (currentWeapon >= transform.childCount - 1)
+                    currentWeapon = 0;
+                else
+                    currentWeapon++;
+            }
+            if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+                if (currentWeapon <= 0)
+                    currentWeapon = transform.childCount - 1;
+                else
+                    currentWeapon--;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                currentWeapon = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+            {
+                currentWeapon = 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
+            {
+                currentWeapon = 2;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4)
+            {
+                currentWeapon = 3;
+            }
+
+            if (previousSelectedWeapon != currentWeapon)
+            {
+                SelectWeapon();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+        if (heavyMotor.isReloading == false)
         {
-            currentWeapon = 1;
+            //above 0 is scroll up, below 0 is scroll down
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                //wraps around if more than childcount
+                if (currentWeapon >= transform.childCount - 1)
+                    currentWeapon = 0;
+                else
+                    currentWeapon++;
+            }
+            if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+                if (currentWeapon <= 0)
+                    currentWeapon = transform.childCount - 1;
+                else
+                    currentWeapon--;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                currentWeapon = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+            {
+                currentWeapon = 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
+            {
+                currentWeapon = 2;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4)
+            {
+                currentWeapon = 3;
+            }
+
+            if (previousSelectedWeapon != currentWeapon)
+            {
+                SelectWeapon();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
+        if (sniperMotor.isReloading == false)
         {
-            currentWeapon = 2;
+            //above 0 is scroll up, below 0 is scroll down
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                //wraps around if more than childcount
+                if (currentWeapon >= transform.childCount - 1)
+                    currentWeapon = 0;
+                else
+                    currentWeapon++;
+            }
+            if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+                if (currentWeapon <= 0)
+                    currentWeapon = transform.childCount - 1;
+                else
+                    currentWeapon--;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                currentWeapon = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+            {
+                currentWeapon = 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
+            {
+                currentWeapon = 2;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4)
+            {
+                currentWeapon = 3;
+            }
+
+            if (previousSelectedWeapon != currentWeapon)
+            {
+                SelectWeapon();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4)
+        else
         {
-            currentWeapon = 3;
-        }
-
-        if (previousSelectedWeapon != currentWeapon)
-        {
-            SelectWeapon();
+            Debug.Log("igfgf");
         }
     }
 
