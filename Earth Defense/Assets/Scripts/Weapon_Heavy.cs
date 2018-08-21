@@ -10,7 +10,7 @@ public class Weapon_Heavy : MonoBehaviour {
     public int maxAmmo = 10;
     private int currentAmmo;
     public float reloadTime = 1f;
-    private bool isReloading = false;
+    public bool isReloading = false;
 
     //public GameObject Bullet_Emitter;
     //public GameObject Bullet;
