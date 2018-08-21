@@ -15,10 +15,14 @@ public class P_Controller : MonoBehaviour {
     {
         motor = GetComponent<P_Motor>();
 
-        musicSource.clip = musicClip;
-        musicSource.Play();
+        if (musicSource != null)
+        {
+            musicSource.clip = musicClip;
+            musicSource.Play();
+        }
 
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
     }
 
     void Update()
