@@ -20,9 +20,9 @@ public class WepSwitch : MonoBehaviour {
     {
         int previousSelectedWeapon = currentWeapon;
 
-        Debug.Log(pistolMotor.isReloading);
+        //Debug.Log(pistolMotor.isReloading);
 
-        if (pistolMotor.isReloading == false)
+        if (pistolMotor.isReloading == false && smgMotor.isReloading == false && heavyMotor.isReloading == false && sniperMotor.isReloading == false)
         {
             //above 0 is scroll up, below 0 is scroll down
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
@@ -67,7 +67,7 @@ public class WepSwitch : MonoBehaviour {
             }
         }
 
-        if (smgMotor.isReloading == false)
+        /* if (smgMotor.isReloading == false)
         {
 
             //above 0 is scroll up, below 0 is scroll down
@@ -111,7 +111,7 @@ public class WepSwitch : MonoBehaviour {
             {
                 SelectWeapon();
             }
-        }
+        } 
 
         if (heavyMotor.isReloading == false)
         {
@@ -201,12 +201,14 @@ public class WepSwitch : MonoBehaviour {
             {
                 SelectWeapon();
             }
-        }
+        } */
 
+        /*
         else
         {
             Debug.Log("igfgf");
         }
+        */
     }
 
     void SelectWeapon()

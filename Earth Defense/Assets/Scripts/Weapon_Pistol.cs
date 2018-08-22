@@ -47,6 +47,8 @@ public class Weapon_Pistol : MonoBehaviour {
         animator.SetBool("Reloading", false);
     }
 
+    float aimTimer = 0f;
+
     void Update()
     {
         if (isReloading)
@@ -68,12 +70,16 @@ public class Weapon_Pistol : MonoBehaviour {
 
         if (Input.GetButton("Fire2") && !isReloading)
         {
+            aimTimer += Time.deltaTime;
             Debug.Log("AIMING");
-            transform.localPosition = Vector3.Lerp(transform.localPosition, aimPosition, Time.deltaTime * adsSpeed);
+            Debug.Log(transform.localPosition);
+            Debug.Log(aimPosition);
+
+            transform.localPosition = Vector3.Lerp(transform.localPosition, aimPosition, aimTimer * adsSpeed);
         }
         else
         {
-            transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition, Time.deltaTime * adsSpeed);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition, aimTimer * adsSpeed);
         }
 
         /*if (Input.GetButtonDown("Fire2"))

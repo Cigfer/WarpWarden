@@ -1210,7 +1210,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cubby (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1221,7 +1221,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 366971039}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.9772544, y: -0.63839626, z: 1.9325275}
+  m_LocalPosition: {x: -13.7, y: 9.77, z: -14.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1952803755}
@@ -3267,7 +3267,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cubby (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3277,13 +3277,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634006251}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.097255, y: -0.63839626, z: 1.9325275}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.3400002, y: 12.17, z: 67.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1952803755}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1656376172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,7 +3465,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cubby (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3476,7 +3476,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1690628803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.78, y: -0.63839626, z: 1.9325275}
+  m_LocalPosition: {x: 57.6, y: 11.57, z: -4.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1952803755}
@@ -3529,6 +3529,31 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 38.6
       objectReference: {fileID: 0}
+    - target: {fileID: 114002713189043064, guid: ee24dc6047b3428478944bcc7391a3b9,
+        type: 2}
+      propertyPath: tpLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1863080461}
+    - target: {fileID: 114002713189043064, guid: ee24dc6047b3428478944bcc7391a3b9,
+        type: 2}
+      propertyPath: tpLocations.Array.data[1]
+      value: 
+      objectReference: {fileID: 366971039}
+    - target: {fileID: 114002713189043064, guid: ee24dc6047b3428478944bcc7391a3b9,
+        type: 2}
+      propertyPath: tpLocations.Array.data[2]
+      value: 
+      objectReference: {fileID: 1634006251}
+    - target: {fileID: 114002713189043064, guid: ee24dc6047b3428478944bcc7391a3b9,
+        type: 2}
+      propertyPath: tpLocations.Array.data[3]
+      value: 
+      objectReference: {fileID: 1847944615}
+    - target: {fileID: 114002713189043064, guid: ee24dc6047b3428478944bcc7391a3b9,
+        type: 2}
+      propertyPath: tpLocations.Array.data[4]
+      value: 
+      objectReference: {fileID: 1690628803}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee24dc6047b3428478944bcc7391a3b9, type: 2}
   m_IsPrefabAsset: 0
@@ -3628,7 +3653,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cubby (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3639,7 +3664,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1847944615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3, y: -0.63839626, z: 1.9325275}
+  m_LocalPosition: {x: -0.58, y: 12.13, z: 125.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1952803755}
@@ -3656,7 +3681,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cubby
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3666,13 +3691,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1863080461}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2072544, y: -0.63839626, z: 1.9325275}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -71.43, y: 11.99, z: 71.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1952803755}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1910042039
 GameObject:
   m_ObjectHideFlags: 0
