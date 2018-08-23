@@ -12,9 +12,6 @@ public class Weapon_Pistol : MonoBehaviour {
     public float reloadTime = 1f;
     public bool isReloading = false;
 
-    //public GameObject Bullet_Emitter;
-    //public GameObject Bullet;
-
     public Camera fpsCam;
 
     public ParticleSystem muzzleFlash;
@@ -24,9 +21,13 @@ public class Weapon_Pistol : MonoBehaviour {
 
     private float nextTimeToFire = 0f;
 
+    public WepSwitch recoilMotor;
+
+    /*
     private Vector3 originalPosition;
     public Vector3 aimPosition;
     public float adsSpeed = 8f;
+    */
 
     //public AudioSource shootSource;
     //public AudioClip shootClip;
@@ -38,7 +39,6 @@ public class Weapon_Pistol : MonoBehaviour {
         //shootSource.clip = shootClip;
 
         currentAmmo = maxAmmo;
-        originalPosition = transform.localPosition;
     }
 
     void OnEnable()
@@ -46,8 +46,6 @@ public class Weapon_Pistol : MonoBehaviour {
         isReloading = false;
         animator.SetBool("Reloading", false);
     }
-
-    float aimTimer = 0f;
 
     void Update()
     {
@@ -67,25 +65,6 @@ public class Weapon_Pistol : MonoBehaviour {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
-
-        if (Input.GetButton("Fire2") && !isReloading)
-        {
-            aimTimer += Time.deltaTime;
-            Debug.Log("AIMING");
-            Debug.Log(transform.localPosition);
-            Debug.Log(aimPosition);
-
-            transform.localPosition = Vector3.Lerp(transform.localPosition, aimPosition, aimTimer * adsSpeed);
-        }
-        else
-        {
-            transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition, aimTimer * adsSpeed);
-        }
-
-        /*if (Input.GetButtonDown("Fire2"))
-        {
-            SecFire();
-        } */
     }
 
     IEnumerator Reload()
@@ -129,6 +108,8 @@ public class Weapon_Pistol : MonoBehaviour {
             Destroy(impactGO, 0.1f);
 
         }
+
+        recoilMotor.recoil();
 
     }
 
