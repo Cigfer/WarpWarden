@@ -24,7 +24,7 @@ public class WepSwitch : MonoBehaviour {
 
     public float[] zoom;
     int normal = 60;
-    float smooth = 5;
+    float smooth = 10;
 
     void Start ()
     {
