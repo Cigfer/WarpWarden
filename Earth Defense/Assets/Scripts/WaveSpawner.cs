@@ -23,7 +23,7 @@ public class WaveSpawner : MonoBehaviour
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-	    if (SpawnedObjects.Count < MaxToSpawn && LastTimeSpawned + TimeBetweenSpawn < Time.time + DelayOffset)
+	    if (SpawnedObjects.Count < MaxToSpawn && LastTimeSpawned + TimeBetweenSpawn < Time.time - DelayOffset)
 	    {
 	        SpawnEnemyType1();
 	    }
