@@ -13,10 +13,15 @@ public class Nudger : MonoBehaviour
     private float LastTimePushed = 0f;
 
     private float intensity = 0;
+
+    private float targetY;
+
+    public float springConstant = 500;
     // Use this for initialization
     void Start () {
 		rb = GetComponent<Rigidbody>();
-	}
+        targetY = transform.position.y + 4 * (Random.value - 0.5f);
+    }
 	
 	// Update is called once per frame
     void Update()
@@ -27,6 +32,9 @@ public class Nudger : MonoBehaviour
             NudgeRandomize();
             LastTimePushed = Time.time;
         }
+        float restoringForce = (targetY - transform.position.y) * Time.deltaTime * springConstant;
+        rb.AddForce(Vector3.up * restoringForce);
+        Debug.DrawLine(transform.position, transform.position + Vector3.up * (targetY - transform.position.y), Color.red);
     }
 
     void NudgeRandomize()

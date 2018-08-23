@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeBetweenPushes: 5
   ForceMultiplier: 10
+  springConstant: 100
 --- !u!114 &114813437628924326
 MonoBehaviour:
   m_ObjectHideFlags: 1
