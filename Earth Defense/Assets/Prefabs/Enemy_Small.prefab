@@ -11,6 +11,24 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1690575212333602}
   m_IsPrefabAsset: 1
+--- !u!1 &1351906708126318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4362890170071498}
+  - component: {fileID: 33830219161684608}
+  - component: {fileID: 23933583217081844}
+  - component: {fileID: 64371534613102124}
+  m_Layer: 12
+  m_Name: SmallBoy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1690575212333602
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,9 +37,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4128090325726492}
-  - component: {fileID: 33634589982395850}
-  - component: {fileID: 23911018952575400}
-  - component: {fileID: 65293766424916530}
   - component: {fileID: 54130645978335246}
   - component: {fileID: 114607686985116190}
   - component: {fileID: 114813437628924326}
@@ -29,6 +44,7 @@ GameObject:
   - component: {fileID: 114540948042829026}
   - component: {fileID: 114784357301053818}
   - component: {fileID: 114164355860544858}
+  - component: {fileID: 65667696618984942}
   m_Layer: 11
   m_Name: Enemy_Small
   m_TagString: Untagged
@@ -43,18 +59,32 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690575212333602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -81.9, y: 7.86, z: 185.04}
+  m_LocalPosition: {x: -55.566643, y: 5.66, z: 96.404015}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4362890170071498}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23911018952575400
+--- !u!4 &4362890170071498
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351906708126318}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.22326961, z: -0.11060024}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children: []
+  m_Father: {fileID: 4128090325726492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23933583217081844
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690575212333602}
+  m_GameObject: {fileID: 1351906708126318}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +94,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: af8f52160e034fc479a669bad0e69efa, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,13 +114,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33634589982395850
+--- !u!33 &33830219161684608
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690575212333602}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 1351906708126318}
+  m_Mesh: {fileID: 4300000, guid: af8f52160e034fc479a669bad0e69efa, type: 3}
 --- !u!54 &54130645978335246
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -106,7 +136,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &65293766424916530
+--- !u!64 &64371534613102124
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351906708126318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: af8f52160e034fc479a669bad0e69efa, type: 3}
+--- !u!65 &65667696618984942
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
