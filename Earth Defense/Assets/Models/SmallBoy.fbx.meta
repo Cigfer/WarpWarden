@@ -9,7 +9,37 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: SmallBot
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SmallBot_mat
+    second: {fileID: 2100000, guid: de2ff171264ec384990a00815ae3c983, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SmallBot_alb
+    second: {fileID: 2800000, guid: 44c48c61b5855a34b885577532af4f3c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SmallBot_emiss
+    second: {fileID: 2800000, guid: 438e71ebd967de74c8fff1bd984aafbb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SmallBot_metal
+    second: {fileID: 2800000, guid: b7ef6ae47de594546bfdfa4ace54c4a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SmallBot_rough4
+    second: {fileID: 2800000, guid: 457fedae8b1ed374e832d0009095a953, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SmallBot_spec
+    second: {fileID: 2800000, guid: 18de93c9c0ff5ca42a3b1848242c6827, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

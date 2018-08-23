@@ -3,29 +3,12 @@ guid: 90cf8dd7ddf000b4f8e80a9319d3da0f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pCube7
-    100002: pCube8
-    100004: pCube9
-    100006: pSphere2
-    100008: //RootNode
-    400000: pCube7
-    400002: pCube8
-    400004: pCube9
-    400006: pSphere2
-    400008: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: SnakeBody_Mat
-    2300000: pCube7
-    2300002: pCube8
-    2300004: pCube9
-    2300006: pSphere2
-    3300000: pCube7
-    3300002: pCube8
-    3300004: pCube9
-    3300006: pSphere2
-    4300000: pCube7
-    4300002: pCube8
-    4300004: pCube9
-    4300006: pSphere2
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Tail_Small_Enemy1
   externalObjects: {}
   materials:
     importMaterials: 1
