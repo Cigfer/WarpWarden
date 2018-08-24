@@ -9,7 +9,27 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Light
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Light_alb_ORANGE
+    second: {fileID: 2800000, guid: 7e882b3b90d96c647bd96a8567510f93, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Light_emiss_ORANGE
+    second: {fileID: 2800000, guid: 14a276384e4a1ad44b9ec86de48e6393, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Light_metal
+    second: {fileID: 2800000, guid: e87481ac49e2ae844ba85b74afa38f52, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Light_rough
+    second: {fileID: 2800000, guid: 726f8672a69ff3b4f85677e4d31383bb, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
