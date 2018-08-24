@@ -7,9 +7,10 @@ public class WepSwitch : MonoBehaviour {
     public int currentWeapon = 0;
 
     public Weapon_Pistol pistolMotor;
-    public Weapon_SMG smgMotor;
-    public Weapon_Heavy heavyMotor;
-    public Weapon_Sniper sniperMotor;
+    public Animator pistolAnimator;
+    public Animator SMGanimator;
+    public Animator heavyAnimator;
+    public Animator sniperAnimator;
 
     public Vector3 originalPosition;
     public Vector3 aimPosition;
@@ -39,7 +40,7 @@ public class WepSwitch : MonoBehaviour {
 
         //Debug.Log(pistolMotor.isReloading);
 
-        if (pistolMotor.isReloading == false && smgMotor.isReloading == false && heavyMotor.isReloading == false && sniperMotor.isReloading == false)
+        if (pistolMotor.isReloading == false)
         {
             //above 0 is scroll up, below 0 is scroll down
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)

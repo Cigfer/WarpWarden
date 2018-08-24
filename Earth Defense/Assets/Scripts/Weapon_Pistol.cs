@@ -21,8 +21,9 @@ public class Weapon_Pistol : MonoBehaviour {
 
     private float nextTimeToFire = 0f;
 
-    public WepSwitch recoilMotor;
+    public PullUpMap mapIsUp;
 
+    public WepSwitch recoilMotor;
 
     /*
     private Vector3 originalPosition;
@@ -57,13 +58,14 @@ public class Weapon_Pistol : MonoBehaviour {
 
         if (Input.GetKey("r"))
         {
-            StartCoroutine(Reload());
+            StartCoroutine("Reload");
             return;
         }
 
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && currentAmmo > 0)
+        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && currentAmmo > 0 && mapIsUp.bigmap.active == false)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
+
             Shoot();
         }
     }
