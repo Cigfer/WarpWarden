@@ -18289,6 +18289,11 @@ Prefab:
       propertyPath: hitScanLayerMask.m_Bits
       value: 4096
       objectReference: {fileID: 0}
+    - target: {fileID: 114395296137993948, guid: ee24dc6047b3428478944bcc7391a3b9,
+        type: 2}
+      propertyPath: HitscanLayerMask.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee24dc6047b3428478944bcc7391a3b9, type: 2}
   m_IsPrefabAsset: 0

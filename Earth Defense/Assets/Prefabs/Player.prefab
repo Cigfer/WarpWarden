@@ -459,8 +459,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4217963853489690}
-  - component: {fileID: 114323631903125904}
   - component: {fileID: 95719426043194834}
+  - component: {fileID: 114432060086769466}
   m_Layer: 0
   m_Name: Sniper
   m_TagString: Untagged
@@ -818,7 +818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4070639078685972}
   - component: {fileID: 95188388838192874}
-  - component: {fileID: 114111901662769960}
+  - component: {fileID: 114849186445575766}
   m_Layer: 0
   m_Name: Heavy
   m_TagString: Untagged
@@ -951,7 +951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4809250640654676}
   - component: {fileID: 95305378209997176}
-  - component: {fileID: 114138792039479478}
+  - component: {fileID: 114310265219067326}
   m_Layer: 0
   m_Name: SMG
   m_TagString: Untagged
@@ -1740,8 +1740,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1275625636109436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20.74, z: 0}
-  m_LocalScale: {x: 8.02254, y: 8.02254, z: 8.02254}
+  m_LocalPosition: {x: 0, y: 33.2, z: 0}
+  m_LocalScale: {x: 13, y: 13, z: 13}
   m_Children: []
   m_Father: {fileID: 4701243783053826}
   m_RootOrder: 1
@@ -3747,50 +3747,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &114111901662769960
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1880146792095996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022d915d235b5a94ca41a991c91781ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  fireRate: 2
-  maxAmmo: 8
-  reloadTime: 5
-  isReloading: 0
-  fpsCam: {fileID: 20362471095103758}
-  muzzleFlash: {fileID: 198092857467000666}
-  impactEffect: {fileID: 1460530532409530, guid: c7e144c00097efe49bc473a32fd60cbf,
-    type: 2}
-  animator: {fileID: 95188388838192874}
---- !u!114 &114138792039479478
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1990892852539034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78205d63f1a0635478d77174ef4b1527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  fireRate: 15
-  maxAmmo: 30
-  reloadTime: 2
-  isReloading: 0
-  fpsCam: {fileID: 20362471095103758}
-  muzzleFlash: {fileID: 198371268223216228}
-  impactEffect: {fileID: 1460530532409530, guid: c7e144c00097efe49bc473a32fd60cbf,
-    type: 2}
-  animator: {fileID: 95305378209997176}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114300510471187296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3805,28 +3767,33 @@ MonoBehaviour:
   lookSensetivity: 3
   musicSource: {fileID: 0}
   musicClip: {fileID: 0}
---- !u!114 &114323631903125904
+--- !u!114 &114310265219067326
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1440184403582884}
+  m_GameObject: {fileID: 1990892852539034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b51fcb0c395f64fb865325692d6ee9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  range: 100
-  fireRate: 1
-  maxAmmo: 2
+  range: 500
+  fireRate: 15
+  maxAmmo: 36
   reloadTime: 3
   isReloading: 0
   fpsCam: {fileID: 20362471095103758}
-  muzzleFlash: {fileID: 198218192067931034}
+  muzzleFlash: {fileID: 198371268223216228}
   impactEffect: {fileID: 1460530532409530, guid: c7e144c00097efe49bc473a32fd60cbf,
     type: 2}
-  animator: {fileID: 95719426043194834}
+  animator: {fileID: 95305378209997176}
+  mapIsUp: {fileID: 0}
+  recoilMotor: {fileID: 114726599223227002}
+  HitscanLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!114 &114395296137993948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3839,17 +3806,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  range: 100
+  range: 500
   fireRate: 4
-  maxAmmo: 8
-  reloadTime: 1.5
+  maxAmmo: 12
+  reloadTime: 2
   isReloading: 0
   fpsCam: {fileID: 20362471095103758}
   muzzleFlash: {fileID: 198960881182509270}
   impactEffect: {fileID: 1460530532409530, guid: c7e144c00097efe49bc473a32fd60cbf,
     type: 2}
   animator: {fileID: 95571697954478200}
-  recoilMotor: {fileID: 0}
+  mapIsUp: {fileID: 0}
+  recoilMotor: {fileID: 114726599223227002}
+  HitscanLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
+--- !u!114 &114432060086769466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440184403582884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 500
+  fireRate: 1
+  maxAmmo: 1
+  reloadTime: 4.5
+  isReloading: 0
+  fpsCam: {fileID: 20362471095103758}
+  muzzleFlash: {fileID: 198218192067931034}
+  impactEffect: {fileID: 1460530532409530, guid: c7e144c00097efe49bc473a32fd60cbf,
+    type: 2}
+  animator: {fileID: 95719426043194834}
+  mapIsUp: {fileID: 0}
+  recoilMotor: {fileID: 114726599223227002}
+  HitscanLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!114 &114456542825712642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3876,9 +3874,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWeapon: 0
   pistolMotor: {fileID: 114395296137993948}
-  smgMotor: {fileID: 114138792039479478}
-  heavyMotor: {fileID: 114111901662769960}
-  sniperMotor: {fileID: 114323631903125904}
+  pistolAnimator: {fileID: 95571697954478200}
+  SMGanimator: {fileID: 95305378209997176}
+  heavyAnimator: {fileID: 95188388838192874}
+  sniperAnimator: {fileID: 95719426043194834}
   originalPosition: {x: 0, y: 0, z: 0}
   aimPosition: {x: 0, y: 0, z: 0}
   adsSpeed: 1
@@ -3894,6 +3893,33 @@ MonoBehaviour:
   - 50
   - 40
   - 20
+--- !u!114 &114849186445575766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880146792095996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 500
+  fireRate: 0.5
+  maxAmmo: 8
+  reloadTime: 4
+  isReloading: 0
+  fpsCam: {fileID: 20362471095103758}
+  muzzleFlash: {fileID: 198092857467000666}
+  impactEffect: {fileID: 1460530532409530, guid: c7e144c00097efe49bc473a32fd60cbf,
+    type: 2}
+  animator: {fileID: 95188388838192874}
+  mapIsUp: {fileID: 0}
+  recoilMotor: {fileID: 114726599223227002}
+  HitscanLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!135 &135202178244021562
 SphereCollider:
   m_ObjectHideFlags: 1

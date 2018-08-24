@@ -25,6 +25,8 @@ public class Weapon_Pistol : MonoBehaviour {
 
     public WepSwitch recoilMotor;
 
+    public LayerMask HitscanLayerMask;
+
     /*
     private Vector3 originalPosition;
     public Vector3 aimPosition;
@@ -97,7 +99,7 @@ public class Weapon_Pistol : MonoBehaviour {
         currentAmmo--;
         RaycastHit hit;
 
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, HitscanLayerMask))
         {
             Debug.Log(hit.transform.name);
 
