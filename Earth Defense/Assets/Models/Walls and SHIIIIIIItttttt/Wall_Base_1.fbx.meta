@@ -10,7 +10,47 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Wall_Base_1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bottom_Lining_alb
+    second: {fileID: 2800000, guid: ca4982c8f35563b4dbcf33675d813d50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bottom_Lining_metal
+    second: {fileID: 2800000, guid: 22537e51a192e6143b2f013de6deb69b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bottom_Lining_rough
+    second: {fileID: 2800000, guid: a811ee7e55a29b0428586a142b95ac50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bottom_Lining_spec
+    second: {fileID: 2800000, guid: 6a90e2f0ad8b23140ac0ddafa72cd490, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_M_alb
+    second: {fileID: 2800000, guid: a589b8c651abae64f9f3d55bd2acc7ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_M_metal
+    second: {fileID: 2800000, guid: cbc745793a51edf418481b7829517100, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_M_rough1
+    second: {fileID: 2800000, guid: 2e2cbd07560a44b4e9bbcb13b3019353, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_M_spec1
+    second: {fileID: 2800000, guid: b571a1f8776f9654a9908f1bffa95184, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

@@ -232,6 +232,9 @@ MonoBehaviour:
   animator: {fileID: 28323276}
   mapIsUp: {fileID: 1247781410}
   recoilMotor: {fileID: 0}
+  HitscanLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!20 &50468421 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20362471095103758, guid: ee24dc6047b3428478944bcc7391a3b9,
@@ -10250,6 +10253,9 @@ MonoBehaviour:
   animator: {fileID: 220158080}
   mapIsUp: {fileID: 1247781410}
   recoilMotor: {fileID: 0}
+  HitscanLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &220158080 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95305378209997176, guid: ee24dc6047b3428478944bcc7391a3b9,
@@ -15831,6 +15837,9 @@ MonoBehaviour:
   animator: {fileID: 429732493}
   mapIsUp: {fileID: 1247781410}
   recoilMotor: {fileID: 0}
+  HitscanLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &429732493 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95188388838192874, guid: ee24dc6047b3428478944bcc7391a3b9,

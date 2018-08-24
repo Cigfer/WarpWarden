@@ -9,7 +9,27 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Wall_M
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_M_alb
+    second: {fileID: 2800000, guid: 4588d41869a1aba4885bcd50acd26d39, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_M_metal
+    second: {fileID: 2800000, guid: 0e32e5abe391cd44a9684407a03b6b00, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_M_rough1
+    second: {fileID: 2800000, guid: 57dcd6283a2d0f0409cb650b6937362e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_M_spec1
+    second: {fileID: 2800000, guid: d96ab48aace795a4eaac47b768d80a73, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
