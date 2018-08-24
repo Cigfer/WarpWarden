@@ -47,8 +47,13 @@ public class Weapon_Pistol : MonoBehaviour {
 
     void OnEnable()
     {
-        isReloading = false;
-        animator.SetBool("Reloading", false);
+        //isReloading = false;
+        //animator.SetBool("Reloading", false);
+    }
+
+    public bool IsReloading()
+    {
+        return isReloading;
     }
 
     void Update()
@@ -75,7 +80,6 @@ public class Weapon_Pistol : MonoBehaviour {
     IEnumerator Reload()
     {
         isReloading = true;
-        Debug.Log("Reloading");
 
         animator.SetBool("Reloading", true);
 

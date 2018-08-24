@@ -6,11 +6,10 @@ public class WepSwitch : MonoBehaviour {
 
     public int currentWeapon = 0;
 
-    public Weapon_Pistol pistolMotor;
-    public Animator pistolAnimator;
-    public Animator SMGanimator;
-    public Animator heavyAnimator;
-    public Animator sniperAnimator;
+    public Weapon_Pistol PistolMotor;
+    public Weapon_Pistol SMGMotor;
+    public Weapon_Pistol HeavyMotor;
+    public Weapon_Pistol SniperMotor;
 
     public Vector3 originalPosition;
     public Vector3 aimPosition;
@@ -38,9 +37,9 @@ public class WepSwitch : MonoBehaviour {
     {
         int previousSelectedWeapon = currentWeapon;
 
-        //Debug.Log(pistolMotor.isReloading);
+        bool isReloading = PistolMotor.isReloading || SMGMotor.isReloading || HeavyMotor.isReloading || SniperMotor.isReloading;
 
-        if (pistolMotor.isReloading == false)
+        if (isReloading == false)
         {
             //above 0 is scroll up, below 0 is scroll down
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
@@ -85,7 +84,7 @@ public class WepSwitch : MonoBehaviour {
             }
         }
 
-        if (Input.GetButton("Fire2") && !pistolMotor.isReloading)
+        if (Input.GetButton("Fire2") && isReloading)
         {
             aimTimer += Time.deltaTime;
 
@@ -100,7 +99,7 @@ public class WepSwitch : MonoBehaviour {
 
         aimTimer = Mathf.Clamp(aimTimer, 0, 1);
 
-        if (Input.GetButton("Fire2") && !pistolMotor.isReloading)
+        if (Input.GetButton("Fire2") && isReloading)
         {
             thisCamera.fieldOfView = Mathf.Lerp(thisCamera.fieldOfView, zoom[currentWeapon], Time.deltaTime * smooth);
         }
