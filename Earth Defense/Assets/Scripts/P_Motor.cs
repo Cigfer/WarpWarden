@@ -36,7 +36,10 @@ public class P_Motor : MonoBehaviour {
     // Run every physics iteration
     void FixedUpdate()
     {
-        PerformRotation();
+        if (!Input.GetKey(KeyCode.Space))
+        {
+            PerformRotation();
+        }
     }
 
     //Perform rotation
