@@ -8,8 +8,6 @@ public class WarpManager : MonoBehaviour {
     public GameObject player;
     public GameObject[] tpLocations;
 
-
-
     // Use this for initialization
     void Start () {
 		
