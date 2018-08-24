@@ -9,7 +9,32 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: TankBot
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TankBot_alb
+    second: {fileID: 2800000, guid: 8ccd8b1244e72c84ea7187dc7eaf0922, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TankBot_emiss
+    second: {fileID: 2800000, guid: 5e8547e2d8534f44ab8d19fc95a341e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TankBot_metal
+    second: {fileID: 2800000, guid: 4e4881958e570064191f01f600bb79a2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TankBot_rough
+    second: {fileID: 2800000, guid: 09452512730fbdb44b6b9b266c4e8ca2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TankBot_spec
+    second: {fileID: 2800000, guid: 7b84d96e6b1f55646a5b9e3dc26980a0, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

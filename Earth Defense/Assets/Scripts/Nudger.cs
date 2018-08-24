@@ -33,7 +33,7 @@ public class Nudger : MonoBehaviour
             LastTimePushed = Time.time;
         }
         float restoringForce = (targetY - transform.position.y) * Time.deltaTime * springConstant;
-        rb.AddForce(Vector3.up * restoringForce);
+        rb.AddForce(Vector3.up * restoringForce, ForceMode.Acceleration);
         Debug.DrawLine(transform.position, transform.position + Vector3.up * (targetY - transform.position.y), Color.red);
     }
 

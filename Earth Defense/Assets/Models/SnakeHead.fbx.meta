@@ -9,7 +9,32 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Small_Enemy1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Head_alb
+    second: {fileID: 2800000, guid: bcaf2011c1f2dd24698ba2fb3c92c99f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Head_emiss
+    second: {fileID: 2800000, guid: 55326524de4c9974e9277677160c94a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Head_metal
+    second: {fileID: 2800000, guid: d242969012848414ea8af2001f414b8c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Head_rough2
+    second: {fileID: 2800000, guid: 90a882a4c57d8bc48aabc6f621992070, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Head_spec
+    second: {fileID: 2800000, guid: 4dda7b17d0ca9774db5023cc62496e38, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

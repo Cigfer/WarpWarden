@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 114784357301053818}
   - component: {fileID: 114164355860544858}
   - component: {fileID: 65667696618984942}
+  - component: {fileID: 114159421094908054}
   m_Layer: 11
   m_Name: Enemy_Small
   m_TagString: Untagged
@@ -59,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690575212333602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.566643, y: 5.66, z: 96.404015}
+  m_LocalPosition: {x: -45.3, y: 7.86, z: 57.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4362890170071498}
@@ -94,7 +95,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: af8f52160e034fc479a669bad0e69efa, type: 3}
+  - {fileID: 2100000, guid: de2ff171264ec384990a00815ae3c983, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,6 +163,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114159421094908054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690575212333602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f24abdd218b83458aa1fccb7368140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  aipath: {fileID: 114813437628924326}
+  protectors: []
+  deathEffects:
+  - {fileID: 132222, guid: ce9a6b1b3e673b54e8ad5746ee0af87d, type: 2}
+  - {fileID: 196814, guid: d76649cf19d5acf4a83c41295a514487, type: 2}
+  - {fileID: 112618, guid: 6f78e3f2221c21f428fa9f41f18f5392, type: 2}
+  - {fileID: 121360, guid: 0fa68b7a3e2f0664aa60e9db30faeb3a, type: 2}
+  - {fileID: 172038, guid: daa68a184b10b1e498d4227aa3433d9c, type: 2}
+  - {fileID: 193142, guid: 7872bd34536466f488398bd14a88cadd, type: 2}
+  - {fileID: 172614, guid: 0347f162c7ebeae4ea35eeec8f638c1b, type: 2}
+  - {fileID: 146748, guid: 729e3d6ea7dadb643b75250bfc7f3247, type: 2}
+  - {fileID: 112512, guid: 3b154cb7750ef3c42b1e5dc77466bc12, type: 2}
+  - {fileID: 167654, guid: ce3250aa5bf9b694f889ed741af81206, type: 2}
+  - {fileID: 198412, guid: 713398a148e185840a055a02d77722cf, type: 2}
+  - {fileID: 141060, guid: e528638b87d6bc4409383e4c1e073f0a, type: 2}
+  - {fileID: 129214, guid: 774560fb0921a884481fd39ada4691ad, type: 2}
+  HealthMode: 0
+  ExplosionScale: 1
 --- !u!114 &114164355860544858
 MonoBehaviour:
   m_ObjectHideFlags: 1

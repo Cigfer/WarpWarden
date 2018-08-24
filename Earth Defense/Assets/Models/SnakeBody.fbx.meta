@@ -9,7 +9,32 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Tail_Small_Enemy1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Body_alb
+    second: {fileID: 2800000, guid: 210f77bcd0f90114ab4dc57bccb51422, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Body_emiss
+    second: {fileID: 2800000, guid: 2e62c6af5dbd009479fd742fc6a40875, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Body_metal
+    second: {fileID: 2800000, guid: 8395e78efe702284eb410be15c096d8c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Body_rough
+    second: {fileID: 2800000, guid: 092e28bda61f1304fab574c70853b75d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Body_spec
+    second: {fileID: 2800000, guid: f85a9676b98eb9b4db03b49225e67338, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
