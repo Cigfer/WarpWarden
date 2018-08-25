@@ -460,7 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4217963853489690}
   - component: {fileID: 95719426043194834}
-  - component: {fileID: 114432060086769466}
+  - component: {fileID: 114276475646162192}
   m_Layer: 0
   m_Name: Sniper
   m_TagString: Untagged
@@ -3753,6 +3753,33 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &114276475646162192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440184403582884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 500
+  fireRate: 1
+  maxAmmo: 1
+  reloadTime: 4.5
+  isReloading: 0
+  fpsCam: {fileID: 20362471095103758}
+  muzzleFlash: {fileID: 198218192067931034}
+  impactEffect: {fileID: 1460530532409530, guid: c7e144c00097efe49bc473a32fd60cbf,
+    type: 2}
+  animator: {fileID: 95719426043194834}
+  mapIsUp: {fileID: 0}
+  recoilMotor: {fileID: 114726599223227002}
+  HitscanLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114300510471187296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3821,33 +3848,6 @@ MonoBehaviour:
   HitscanLayerMask:
     serializedVersion: 2
     m_Bits: 4096
---- !u!114 &114432060086769466
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1440184403582884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 500
-  fireRate: 1
-  maxAmmo: 1
-  reloadTime: 4.5
-  isReloading: 0
-  fpsCam: {fileID: 20362471095103758}
-  muzzleFlash: {fileID: 198218192067931034}
-  impactEffect: {fileID: 1460530532409530, guid: c7e144c00097efe49bc473a32fd60cbf,
-    type: 2}
-  animator: {fileID: 95719426043194834}
-  mapIsUp: {fileID: 0}
-  recoilMotor: {fileID: 114726599223227002}
-  HitscanLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
 --- !u!114 &114456542825712642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3873,11 +3873,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: 0
-  pistolMotor: {fileID: 114395296137993948}
-  pistolAnimator: {fileID: 95571697954478200}
-  SMGanimator: {fileID: 95305378209997176}
-  heavyAnimator: {fileID: 95188388838192874}
-  sniperAnimator: {fileID: 95719426043194834}
+  PistolMotor: {fileID: 114395296137993948}
+  SMGMotor: {fileID: 114310265219067326}
+  HeavyMotor: {fileID: 114849186445575766}
+  SniperMotor: {fileID: 114276475646162192}
   originalPosition: {x: 0, y: 0, z: 0}
   aimPosition: {x: 0, y: 0, z: 0}
   adsSpeed: 1
