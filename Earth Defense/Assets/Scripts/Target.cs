@@ -18,6 +18,9 @@ public class Target : MonoBehaviour
     private bool snakedead = false;
 
     public float ExplosionScale = 1.0f;
+    public bool isShield = false;
+
+    public float explosionForce = 1000f;
 
     public void TakeDamage(float amount)
     {
@@ -71,27 +74,28 @@ public class Target : MonoBehaviour
 
     void Die()
     {
-        aipath.enabled = false;
+        if (aipath != null)
+        {
+            aipath.enabled = false;
+        }
         var rb = GetComponent<Rigidbody>();
         rb.useGravity = true;
-        rb.AddForce((Vector3.up * Random.value + Random.insideUnitSphere) * (Random.value + 0.2f) * 1000f, ForceMode.Acceleration);
+        rb.AddForce((Vector3.up * Random.value + Random.insideUnitSphere) * (Random.value + 0.2f) * explosionForce, ForceMode.Acceleration);
         rb.AddTorque(Random.insideUnitSphere * Random.value * 250000f);
         float destroyTimer = (Random.value * 0.5f) + 0.5f;
+        if (isShield) destroyTimer = 0;
         Invoke("Explode", destroyTimer);
         Destroy(gameObject, destroyTimer + 0.1f);
     }
 
     void Explode()
     {
+        if (deathEffects.Length == 0)
+            return;
         int choose = Random.Range(0, deathEffects.Length);
         GameObject deathGO = Instantiate(deathEffects[choose], transform.position, Random.rotationUniform);
         deathGO.transform.localScale *= ExplosionScale;
         Debug.Log("Did explosion index: " + choose);
-        while (Random.value > 0.5f)
-        {
-            choose = Random.Range(0, deathEffects.Length);
-            GameObject deathGO2 = Instantiate(deathEffects[choose], transform.position, Random.rotationUniform);
-        }
     }
 }
 
