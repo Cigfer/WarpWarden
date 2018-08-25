@@ -84,31 +84,23 @@ public class WepSwitch : MonoBehaviour {
             }
         }
 
-        if (Input.GetButton("Fire2") && isReloading)
+        if (Input.GetButton("Fire2") && !isReloading)
         {
-            aimTimer += Time.deltaTime;
 
             transform.localPosition = Vector3.Slerp(transform.localPosition, aimPositions[currentWeapon], aimTimer * adsSpeed);
+            thisCamera.fieldOfView = Mathf.Lerp(thisCamera.fieldOfView, zoom[currentWeapon], Time.deltaTime * smooth);
+
+            aimTimer += Time.deltaTime;
         }
         else
         {
             transform.localPosition = Vector3.Slerp(transform.localPosition, originalPosition, aimTimer * adsSpeed);
+            thisCamera.fieldOfView = Mathf.Lerp(thisCamera.fieldOfView, normal, Time.deltaTime * smooth);
 
             aimTimer -= Time.deltaTime;
         }
 
         aimTimer = Mathf.Clamp(aimTimer, 0, 1);
-
-        if (Input.GetButton("Fire2") && isReloading)
-        {
-            thisCamera.fieldOfView = Mathf.Lerp(thisCamera.fieldOfView, zoom[currentWeapon], Time.deltaTime * smooth);
-        }
-
-        else
-        {
-            thisCamera.fieldOfView = Mathf.Lerp(thisCamera.fieldOfView, normal, Time.deltaTime * smooth);
-        }
-
     }
 
     void SelectWeapon()
