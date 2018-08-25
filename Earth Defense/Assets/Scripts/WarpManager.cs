@@ -16,6 +16,7 @@ public class WarpManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        /*
         if (Input.GetKeyDown("[1]"))
         {
             player.transform.position = tpLocations[0].transform.position;
@@ -41,5 +42,6 @@ public class WarpManager : MonoBehaviour {
             player.transform.position = tpLocations[4].transform.position;
             player.transform.rotation = tpLocations[4].transform.rotation;
         }
+        */
     }
 }
