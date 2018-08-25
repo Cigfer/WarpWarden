@@ -8,7 +8,7 @@ public class Weapon_Pistol : MonoBehaviour {
     public float fireRate = 15f;
 
     public int maxAmmo = 10;
-    private int currentAmmo;
+    public int currentAmmo;
     public float reloadTime = 1f;
     public bool isReloading = false;
 
@@ -26,6 +26,8 @@ public class Weapon_Pistol : MonoBehaviour {
     public WepSwitch recoilMotor;
 
     public LayerMask HitscanLayerMask;
+
+    public GameObject uiAmmo;
 
     /*
     private Vector3 originalPosition;
@@ -52,8 +54,14 @@ public class Weapon_Pistol : MonoBehaviour {
 
     void OnEnable()
     {
+        uiAmmo.SetActive(true);
         //isReloading = false;
         //animator.SetBool("Reloading", false);
+    }
+
+    void OnDisable()
+    {
+        uiAmmo.SetActive(false);
     }
 
     public bool IsReloading()
