@@ -27,6 +27,9 @@ public class Weapon_Pistol : MonoBehaviour {
 
     public LayerMask HitscanLayerMask;
 
+
+    public float recoilIntensity = 1f;
+
     /*
     private Vector3 originalPosition;
     public Vector3 aimPosition;
@@ -123,7 +126,7 @@ public class Weapon_Pistol : MonoBehaviour {
 
         }
 
-        recoilMotor.recoil();
+        recoilMotor.Shake(recoilIntensity);
 
     }
 

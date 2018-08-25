@@ -86,8 +86,8 @@ public class WepSwitch : MonoBehaviour {
 
         if (Input.GetButton("Fire2") && !isReloading)
         {
-
             transform.localPosition = Vector3.Slerp(transform.localPosition, aimPositions[currentWeapon], aimTimer * adsSpeed);
+            transform.localPosition = Vector3.Slerp(transform.localPosition, aimPositions[currentWeapon], recoilValue);
             thisCamera.fieldOfView = Mathf.Lerp(thisCamera.fieldOfView, zoom[currentWeapon], Time.deltaTime * smooth);
 
             aimTimer += Time.deltaTime;
@@ -95,12 +95,14 @@ public class WepSwitch : MonoBehaviour {
         else
         {
             transform.localPosition = Vector3.Slerp(transform.localPosition, originalPosition, aimTimer * adsSpeed);
+            transform.localPosition = Vector3.Slerp(transform.localPosition, originalPosition, recoilValue);
             thisCamera.fieldOfView = Mathf.Lerp(thisCamera.fieldOfView, normal, Time.deltaTime * smooth);
 
             aimTimer -= Time.deltaTime;
         }
-
+        recoilValue += Time.deltaTime;
         aimTimer = Mathf.Clamp(aimTimer, 0, 1);
+        recoilValue = Mathf.Clamp(recoilValue, 0, 1);
     }
 
     void SelectWeapon()
@@ -119,10 +121,9 @@ public class WepSwitch : MonoBehaviour {
         }
     }
 
-    public void recoil()
+    public void Shake(float intensity)
     {
-        recoilValue = 1f;
-
-
+        this.transform.localPosition += ((Vector3.back + Random.insideUnitSphere) / 2) * intensity;
+        recoilValue = 0;
     }
 }
