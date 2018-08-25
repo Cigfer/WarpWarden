@@ -43,6 +43,11 @@ public class Weapon_Pistol : MonoBehaviour {
         //shootSource.clip = shootClip;
 
         currentAmmo = maxAmmo;
+
+        if (mapIsUp == null)
+        {
+            mapIsUp = GameObject.Find("Canvas").GetComponent<PullUpMap>();
+        }
     }
 
     void OnEnable()
