@@ -290,7 +290,6 @@ GameObject:
   - component: {fileID: 4719670062872476}
   - component: {fileID: 33130491427137562}
   - component: {fileID: 23837836759113774}
-  - component: {fileID: 65849684621470898}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -348,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1354015206310134
 GameObject:
   m_ObjectHideFlags: 1
@@ -467,7 +466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1466100333541094
 GameObject:
   m_ObjectHideFlags: 1
@@ -779,7 +778,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4847499228035210}
-  - component: {fileID: 135202178244021562}
   - component: {fileID: 54363237845714494}
   - component: {fileID: 114300510471187296}
   - component: {fileID: 114456542825712642}
@@ -801,7 +799,6 @@ GameObject:
   - component: {fileID: 4417292734881484}
   - component: {fileID: 33912680160888838}
   - component: {fileID: 23189120904980142}
-  - component: {fileID: 65614672948777200}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -919,7 +916,6 @@ GameObject:
   - component: {fileID: 4664079235577440}
   - component: {fileID: 33620393834386100}
   - component: {fileID: 23096020875724914}
-  - component: {fileID: 65670376099495244}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -3463,44 +3459,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
---- !u!65 &65614672948777200
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1868633629011232}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65670376099495244
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1945034698916532}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65849684621470898
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1318431710555736}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!81 &81777529542909884
 AudioListener:
   m_ObjectHideFlags: 1
@@ -3753,6 +3713,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114276475646162192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3768,6 +3729,7 @@ MonoBehaviour:
   range: 500
   fireRate: 1
   maxAmmo: 1
+  currentAmmo: 0
   reloadTime: 4.5
   isReloading: 0
   fpsCam: {fileID: 20362471095103758}
@@ -3780,6 +3742,8 @@ MonoBehaviour:
   HitscanLayerMask:
     serializedVersion: 2
     m_Bits: 0
+  recoilIntensity: 1
+  uiAmmo: {fileID: 0}
 --- !u!114 &114300510471187296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3809,6 +3773,7 @@ MonoBehaviour:
   range: 500
   fireRate: 15
   maxAmmo: 36
+  currentAmmo: 0
   reloadTime: 3
   isReloading: 0
   fpsCam: {fileID: 20362471095103758}
@@ -3821,6 +3786,8 @@ MonoBehaviour:
   HitscanLayerMask:
     serializedVersion: 2
     m_Bits: 4096
+  recoilIntensity: 1
+  uiAmmo: {fileID: 0}
 --- !u!114 &114395296137993948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3836,6 +3803,7 @@ MonoBehaviour:
   range: 500
   fireRate: 4
   maxAmmo: 12
+  currentAmmo: 0
   reloadTime: 2
   isReloading: 0
   fpsCam: {fileID: 20362471095103758}
@@ -3848,6 +3816,8 @@ MonoBehaviour:
   HitscanLayerMask:
     serializedVersion: 2
     m_Bits: 4096
+  recoilIntensity: 1
+  uiAmmo: {fileID: 0}
 --- !u!114 &114456542825712642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3907,6 +3877,7 @@ MonoBehaviour:
   range: 500
   fireRate: 0.5
   maxAmmo: 8
+  currentAmmo: 0
   reloadTime: 4
   isReloading: 0
   fpsCam: {fileID: 20362471095103758}
@@ -3919,18 +3890,8 @@ MonoBehaviour:
   HitscanLayerMask:
     serializedVersion: 2
     m_Bits: 4096
---- !u!135 &135202178244021562
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1865586453724932}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  recoilIntensity: 1
+  uiAmmo: {fileID: 0}
 --- !u!198 &198092857467000666
 ParticleSystem:
   m_ObjectHideFlags: 1
