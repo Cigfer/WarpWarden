@@ -295,7 +295,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176884431170460}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000013411044}
-  m_LocalPosition: {x: -32.3, y: 15, z: 105.7}
+  m_LocalPosition: {x: -38.21228, y: 6.64, z: 111.60304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4371730979354776}
@@ -515,7 +515,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!54 &54333011778221954
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -544,8 +544,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!54 &54778532169522416
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -559,8 +559,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!64 &64098469431956720
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -695,6 +695,8 @@ MonoBehaviour:
   - {fileID: 129214, guid: 774560fb0921a884481fd39ada4691ad, type: 2}
   HealthMode: 1
   ExplosionScale: 1
+  isShield: 0
+  explosionForce: 1000
 --- !u!114 &114116943528996508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -759,7 +761,7 @@ MonoBehaviour:
   repathRate: 0.2
   canSearch: 1
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 4
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -768,12 +770,12 @@ MonoBehaviour:
   rotationIn2D: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: 25
-  rotationSpeed: 360
+  rotationSpeed: 20
   slowdownDistance: 8
   pickNextWaypointDist: 4
   endReachedDistance: 3
   alwaysDrawGizmos: 0
-  slowWhenNotFacingTarget: 0
+  slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
 --- !u!114 &114391167266320664
@@ -806,6 +808,8 @@ MonoBehaviour:
   - {fileID: 129214, guid: 774560fb0921a884481fd39ada4691ad, type: 2}
   HealthMode: 1
   ExplosionScale: 1
+  isShield: 0
+  explosionForce: 1000
 --- !u!114 &114513853087863014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -853,6 +857,8 @@ MonoBehaviour:
   - {fileID: 129214, guid: 774560fb0921a884481fd39ada4691ad, type: 2}
   HealthMode: 0
   ExplosionScale: 2
+  isShield: 0
+  explosionForce: 1000
 --- !u!114 &114797433816053064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -878,7 +884,7 @@ MonoBehaviour:
     useGraphRaycasting: 0
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask: -1
+  graphMask: 2
 --- !u!114 &114993413875558670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -909,6 +915,8 @@ MonoBehaviour:
   - {fileID: 129214, guid: 774560fb0921a884481fd39ada4691ad, type: 2}
   HealthMode: 1
   ExplosionScale: 1
+  isShield: 0
+  explosionForce: 1000
 --- !u!153 &153122730300393962
 ConfigurableJoint:
   m_ObjectHideFlags: 1
