@@ -40,7 +40,7 @@ public class WaveSpawner : MonoBehaviour
 	        SpawnEnemyType1();
 	        first = false;
 	    }
-	    if ((LastTimeSpawned + TimeBetweenSpawn < Time.time - (DelayOffset + StartTimeOffset)) && TotalToSpawn > 0)
+	    if ((LastTimeSpawned + TimeBetweenSpawn < Time.time - (DelayOffset)) && TotalToSpawn > 0)
 	    {
 	        SpawnEnemyType1();
 	    }
