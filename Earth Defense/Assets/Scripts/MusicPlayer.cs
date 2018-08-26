@@ -1,28 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicPlayer : MonoBehaviour {
 
     public AudioClip[] songs;
-    int currentSong = 0;
+    public AudioSource musicSource;
 
     // Use this for initialization
     void Start () {
-		
+        musicSource.loop = false;
 	}
+
+    private AudioClip GetRandomClip()
+    {
+        return songs[Random.Range(0, songs.Length)];
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<AudioSource>().isPlaying == false)
+        if (!musicSource.isPlaying)
         {
-            currentSong++;
-            if (currentSong >= songs.Length)
-            {
-                GetComponent<AudioSource>().clip = songs[currentSong];
-                GetComponent<AudioSource>().Play();
-            }
+            musicSource.clip = GetRandomClip();
+            musicSource.Play();
+            Debug.Log(songs.Length);
         }
+
     }
 }

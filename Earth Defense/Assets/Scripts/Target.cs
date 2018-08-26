@@ -22,6 +22,9 @@ public class Target : MonoBehaviour
 
     public float explosionForce = 1000f;
 
+    //public AudioClip[] splosions;
+    //public AudioSource splosionSource;
+
     public void TakeDamage(float amount)
     {
         if (HealthMode == Mode.SIMPLE)
@@ -71,6 +74,18 @@ public class Target : MonoBehaviour
     {
         Destroy(transform.GetChild(0).gameObject);
     }
+    /*
+    private AudioClip GetRandomClip()
+    {
+        return splosions[Random.Range(0, 3)];
+    }
+
+    void PlayExplosion()
+    {
+        splosionSource.clip = GetRandomClip();
+        splosionSource.Play();
+    }
+    */
 
     void Die()
     {
@@ -85,7 +100,9 @@ public class Target : MonoBehaviour
         float destroyTimer = (Random.value * 0.5f) + 0.5f;
         if (isShield) destroyTimer = 0;
         Invoke("Explode", destroyTimer);
+        //PlayExplosion();
         Destroy(gameObject, destroyTimer + 0.1f);
+        Debug.Log("Sound");
     }
 
     void Explode()

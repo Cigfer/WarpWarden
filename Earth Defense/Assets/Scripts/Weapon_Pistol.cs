@@ -35,8 +35,10 @@ public class Weapon_Pistol : MonoBehaviour {
 
     public GameObject uiAmmo;
 
-    //public AudioSource shootSource;
-    //public AudioClip shootClip;
+    public AudioSource shootSource;
+    public AudioSource reloadSource;
+    public AudioClip shootClip;
+    public AudioClip reloadClip;
 
     public GameObject teleIndicator;
 
@@ -56,7 +58,8 @@ public class Weapon_Pistol : MonoBehaviour {
 
     void Start()
     {
-        //shootSource.clip = shootClip;
+        shootSource.clip = shootClip;
+        reloadSource.clip = reloadClip;
 
         currentAmmo = maxAmmo;
 
@@ -83,11 +86,6 @@ public class Weapon_Pistol : MonoBehaviour {
     public bool IsReloading()
     {
         return isReloading;
-    }
-
-    void teleportationIndicator()
-    {
-        
     }
 
     void Update()
@@ -236,6 +234,8 @@ public class Weapon_Pistol : MonoBehaviour {
     {
         isReloading = true;
 
+        reloadSource.Play();
+
         animator.SetBool("Reloading", true);
 
         //extra time with reloadTime is because guns fire before animation is fully complete
@@ -253,7 +253,7 @@ public class Weapon_Pistol : MonoBehaviour {
     void Shoot()
     {
         muzzleFlash.Play();
-        //shootSource.Play();
+        shootSource.Play();
 
         currentAmmo--;
         RaycastHit hit;
@@ -276,30 +276,4 @@ public class Weapon_Pistol : MonoBehaviour {
         recoilMotor.Shake(recoilIntensity);
 
     }
-
-    /*private void AimDownSights()
-        {
-            if (Input.GetButton("Fire2") && !isReloading)
-            {
-                Debug.Log("AIMING");
-                transform.localPosition = Vector3.Lerp(transform.localPosition, aimPosition, Time.deltaTime * adsSpeed);
-            }
-            else
-            {
-                transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition, Time.deltaTime * adsSpeed);
-            }
-        }*/
-
-    /*void SecFire()
-    {
-        GameObject Temporary_Bullet_Handler;
-        Temporary_Bullet_Handler = Instantiate(Bullet, Bullet_Emitter.transform.position, Bullet_Emitter.transform.rotation) as GameObject;
-
-        Rigidbody Temporary_RigidBody;
-        Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody>();
-
-        Temporary_RigidBody.AddForce(transform.forward * Bullet_Forward_Force);
-
-        //Destroy(Temporary_Bullet_Handler, 5f);
-    }*/
 }

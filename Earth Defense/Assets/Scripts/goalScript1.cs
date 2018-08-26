@@ -13,8 +13,6 @@ public class goalScript1 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-
         if (other.gameObject.tag == "SmallBoy")
         {
             lives.damage -= SmallBoyDamage;
@@ -29,5 +27,7 @@ public class goalScript1 : MonoBehaviour
         {
             lives.damage -= BigBoyDamage;
         }
+
+        Destroy(other.gameObject);
     }
 }
