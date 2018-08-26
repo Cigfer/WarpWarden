@@ -61,6 +61,25 @@ public class Weapon : MonoBehaviour {
             Shoot();
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            RaycastHit loc;
+
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out loc, range))
+            {
+                Debug.Log(loc.transform.name);
+                Target target = loc.transform.GetComponent<Target>();
+                if (target != null)
+                {
+                    target.TakeDamage(damage);
+                }
+
+                GameObject impactGO = Instantiate(impactEffect, loc.point, Quaternion.LookRotation(loc.normal));
+                Destroy(impactGO, 0.1f);
+            }
+
+        }
+
         /*if (Input.GetButtonDown("Fire2"))
         {
             SecFire();

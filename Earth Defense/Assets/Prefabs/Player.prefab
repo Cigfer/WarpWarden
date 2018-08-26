@@ -1681,15 +1681,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865586453724932}
-  m_LocalRotation: {x: 0, y: 0.3305143, z: 0, w: 0.943801}
-  m_LocalPosition: {x: -73.57, y: 13.7, z: 69.2}
+  m_LocalRotation: {x: -0, y: 0.99999505, z: -0, w: 0.003140818}
+  m_LocalPosition: {x: 52.56, y: 12.880001, z: 46.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4701243783053826}
   - {fileID: 4742036068015492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 38.6, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.64001, z: 0}
 --- !u!4 &4862883398369118
 Transform:
   m_ObjectHideFlags: 1
@@ -1796,7 +1796,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16183
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3725,7 +3725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  warpManager: {fileID: 114002713189043064}
+  damage: 40
   range: 500
   fireRate: 1
   maxAmmo: 1
@@ -3741,9 +3742,46 @@ MonoBehaviour:
   recoilMotor: {fileID: 114726599223227002}
   HitscanLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   recoilIntensity: 1
   uiAmmo: {fileID: 0}
+  teleIndicator: {fileID: 0}
+  manualTeleportCubby:
+    serializedVersion: 2
+    m_Bits: 32768
+  manualTeleportCubby1:
+    serializedVersion: 2
+    m_Bits: 65536
+  manualTeleportCubby2:
+    serializedVersion: 2
+    m_Bits: 131072
+  manualTeleportCubby3:
+    serializedVersion: 2
+    m_Bits: 262144
+  manualTeleportCubby4:
+    serializedVersion: 2
+    m_Bits: 524288
+  manualTeleportCubby5:
+    serializedVersion: 2
+    m_Bits: 1048576
+  manualTeleportCubby6:
+    serializedVersion: 2
+    m_Bits: 2097152
+  manualTeleportCubby7:
+    serializedVersion: 2
+    m_Bits: 4194304
+  manualTeleportCubby8:
+    serializedVersion: 2
+    m_Bits: 8388608
+  manualTeleportCubby9:
+    serializedVersion: 2
+    m_Bits: 16777216
+  manualTeleportCubby10:
+    serializedVersion: 2
+    m_Bits: 33554432
+  manualTeleportCubby11:
+    serializedVersion: 2
+    m_Bits: 67108864
 --- !u!114 &114300510471187296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3769,7 +3807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  warpManager: {fileID: 114002713189043064}
+  damage: 2
   range: 500
   fireRate: 15
   maxAmmo: 36
@@ -3786,8 +3825,45 @@ MonoBehaviour:
   HitscanLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  recoilIntensity: 1
+  recoilIntensity: 0.05
   uiAmmo: {fileID: 0}
+  teleIndicator: {fileID: 0}
+  manualTeleportCubby:
+    serializedVersion: 2
+    m_Bits: 32768
+  manualTeleportCubby1:
+    serializedVersion: 2
+    m_Bits: 65536
+  manualTeleportCubby2:
+    serializedVersion: 2
+    m_Bits: 131072
+  manualTeleportCubby3:
+    serializedVersion: 2
+    m_Bits: 262144
+  manualTeleportCubby4:
+    serializedVersion: 2
+    m_Bits: 524288
+  manualTeleportCubby5:
+    serializedVersion: 2
+    m_Bits: 1048576
+  manualTeleportCubby6:
+    serializedVersion: 2
+    m_Bits: 2097152
+  manualTeleportCubby7:
+    serializedVersion: 2
+    m_Bits: 4194304
+  manualTeleportCubby8:
+    serializedVersion: 2
+    m_Bits: 8388608
+  manualTeleportCubby9:
+    serializedVersion: 2
+    m_Bits: 16777216
+  manualTeleportCubby10:
+    serializedVersion: 2
+    m_Bits: 33554432
+  manualTeleportCubby11:
+    serializedVersion: 2
+    m_Bits: 67108864
 --- !u!114 &114395296137993948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3799,7 +3875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  warpManager: {fileID: 114002713189043064}
+  damage: 5
   range: 500
   fireRate: 4
   maxAmmo: 12
@@ -3816,8 +3893,45 @@ MonoBehaviour:
   HitscanLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  recoilIntensity: 1
+  recoilIntensity: 0.1
   uiAmmo: {fileID: 0}
+  teleIndicator: {fileID: 0}
+  manualTeleportCubby:
+    serializedVersion: 2
+    m_Bits: 32768
+  manualTeleportCubby1:
+    serializedVersion: 2
+    m_Bits: 65536
+  manualTeleportCubby2:
+    serializedVersion: 2
+    m_Bits: 131072
+  manualTeleportCubby3:
+    serializedVersion: 2
+    m_Bits: 262144
+  manualTeleportCubby4:
+    serializedVersion: 2
+    m_Bits: 524288
+  manualTeleportCubby5:
+    serializedVersion: 2
+    m_Bits: 1048576
+  manualTeleportCubby6:
+    serializedVersion: 2
+    m_Bits: 2097152
+  manualTeleportCubby7:
+    serializedVersion: 2
+    m_Bits: 4194304
+  manualTeleportCubby8:
+    serializedVersion: 2
+    m_Bits: 8388608
+  manualTeleportCubby9:
+    serializedVersion: 2
+    m_Bits: 16777216
+  manualTeleportCubby10:
+    serializedVersion: 2
+    m_Bits: 33554432
+  manualTeleportCubby11:
+    serializedVersion: 2
+    m_Bits: 67108864
 --- !u!114 &114456542825712642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3873,9 +3987,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2651943039c0dac488ac97efbd553636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  warpManager: {fileID: 114002713189043064}
   damage: 10
   range: 500
-  fireRate: 0.5
+  fireRate: 1
   maxAmmo: 8
   currentAmmo: 0
   reloadTime: 4
@@ -3890,8 +4005,45 @@ MonoBehaviour:
   HitscanLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  recoilIntensity: 1
+  recoilIntensity: 0.5
   uiAmmo: {fileID: 0}
+  teleIndicator: {fileID: 0}
+  manualTeleportCubby:
+    serializedVersion: 2
+    m_Bits: 32768
+  manualTeleportCubby1:
+    serializedVersion: 2
+    m_Bits: 65536
+  manualTeleportCubby2:
+    serializedVersion: 2
+    m_Bits: 131072
+  manualTeleportCubby3:
+    serializedVersion: 2
+    m_Bits: 262144
+  manualTeleportCubby4:
+    serializedVersion: 2
+    m_Bits: 524288
+  manualTeleportCubby5:
+    serializedVersion: 2
+    m_Bits: 1048576
+  manualTeleportCubby6:
+    serializedVersion: 2
+    m_Bits: 2097152
+  manualTeleportCubby7:
+    serializedVersion: 2
+    m_Bits: 4194304
+  manualTeleportCubby8:
+    serializedVersion: 2
+    m_Bits: 8388608
+  manualTeleportCubby9:
+    serializedVersion: 2
+    m_Bits: 16777216
+  manualTeleportCubby10:
+    serializedVersion: 2
+    m_Bits: 33554432
+  manualTeleportCubby11:
+    serializedVersion: 2
+    m_Bits: 67108864
 --- !u!198 &198092857467000666
 ParticleSystem:
   m_ObjectHideFlags: 1

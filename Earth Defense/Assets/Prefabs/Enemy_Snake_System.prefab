@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4961066964019942}
   m_Layer: 11
   m_Name: Enemy_Snake_System
-  m_TagString: Untagged
+  m_TagString: SnakeBoy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176884431170460}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000013411044}
-  m_LocalPosition: {x: 85.02968, y: 16.5, z: 21.135265}
+  m_LocalPosition: {x: 60.28234, y: 18.181995, z: 15.154205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4371730979354776}
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f24abdd218b83458aa1fccb7368140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 10
   aipath: {fileID: 0}
   protectors: []
   deathEffects:
@@ -834,7 +834,7 @@ MonoBehaviour:
   repathRate: 0.2
   canSearch: 1
   canMove: 1
-  maxSpeed: 4
+  maxSpeed: 3.5
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -862,7 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f24abdd218b83458aa1fccb7368140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 10
   aipath: {fileID: 0}
   protectors: []
   deathEffects:
@@ -908,7 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f24abdd218b83458aa1fccb7368140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 40
   aipath: {fileID: 114295647664832796}
   protectors:
   - {fileID: 1194890347566740}
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f24abdd218b83458aa1fccb7368140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 10
   aipath: {fileID: 0}
   protectors: []
   deathEffects:

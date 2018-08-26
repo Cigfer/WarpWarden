@@ -7,11 +7,6 @@ public class WarpManager : MonoBehaviour {
     public GameObject currentCubby;
     public GameObject player;
     public GameObject[] tpLocations;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update ()

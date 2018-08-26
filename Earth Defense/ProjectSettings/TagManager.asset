@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - TankNode
+  - Cubby1
+  - SmallBoy
+  - SnakeBoy
+  - BigBoy
   layers:
   - Default
   - TransparentFX
@@ -21,18 +25,18 @@ TagManager:
   - EnemyHitbox
   - Ceiling
   - Enemy_Indicator
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - manualTeleportCubby
+  - manualTeleportCubby1
+  - manualTeleportCubby2
+  - manualTeleportCubby3
+  - manualTeleportCubby4
+  - manualTeleportCubby5
+  - manualTeleportCubby6
+  - manualTeleportCubby7
+  - manualTeleportCubby8
+  - manualTeleportCubby9
+  - manualTeleportCubby10
+  - manualTeleportCubby11
   - 
   - 
   - 
