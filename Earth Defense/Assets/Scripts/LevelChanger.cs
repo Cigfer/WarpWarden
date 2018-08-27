@@ -1,21 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LevelChanger : MonoBehaviour {
+
+    public TImer timer;
 
     public Animator animator;
 
     private int levelToLoad;
 
-	void Update () {
-		if (Input.GetKeyDown("[1]"))
-        {
-            FadeToLevel(1);
-        }
+    public GameObject fader;
 
-        if (Input.GetKeyDown("[2]"))
+    public Button playButton;
+    //public Button backToMainMenu;
+
+    void Start()
+    {
+        //timer = GetComponent<TImer>;
+
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        string sceneName = currentScene.name;
+
+        if (sceneName == "Title")
+        {
+            fader.SetActive(false);
+        }
+        else
+        {
+            fader.SetActive(true);
+        }
+       
+        Button playB = playButton.GetComponent<Button>();
+        //Button backToM = backToMainMenu.GetComponent<Button>();
+
+        playB.onClick.AddListener(delegate { FadeToLevel(1); }) ;
+        //backToM.onClick.AddListener(delegate { FadeToLevel(0); });
+    }
+
+	void Update ()
+    {
+        if (timer.m_leftTime <= 0)
         {
             FadeToLevel(2);
         }
@@ -23,6 +51,7 @@ public class LevelChanger : MonoBehaviour {
 
     public void FadeToLevel (int levelIndex)
     {
+        fader.SetActive(true);
         levelToLoad = levelIndex;
         animator.SetTrigger("FadeOut");
     }

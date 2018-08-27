@@ -4,10 +4,10 @@ using UnityEngine.UI;
 public class TImer : MonoBehaviour
 {
     public int Minutes = 1;
-    public int Seconds = 10;
+    public int Seconds = 25;
 
     private Text m_text;
-    private float m_leftTime;
+    public float m_leftTime;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class TImer : MonoBehaviour
             //  Show current clock
             if (m_leftTime > 0f)
             {
-                m_text.text = "Time : " + Minutes + ":" + Seconds.ToString("00");
+                m_text.text = "Time Left: " + Minutes + ":" + Seconds.ToString("00");
             }
             else
             {

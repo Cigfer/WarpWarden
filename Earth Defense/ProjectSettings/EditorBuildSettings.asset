@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/3dfcea0744ea5344eab506ddd37b6144
+    guid: 3dfcea0744ea5344eab506ddd37b6144
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
@@ -22,5 +25,5 @@ EditorBuildSettings:
     guid: ee0a375e34b3f864cb5f5c35e4a5f96f
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
-    guid: 3dfcea0744ea5344eab506ddd37b6144
+    guid: 0d1e8477dfd4f414a97cef71446f5830
   m_configObjects: {}
