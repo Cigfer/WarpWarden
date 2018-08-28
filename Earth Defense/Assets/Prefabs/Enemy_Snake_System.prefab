@@ -326,7 +326,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1176884431170460}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000013411044}
-  m_LocalPosition: {x: 60.28234, y: 18.181995, z: 15.154205}
+  m_LocalPosition: {x: 34.82779, y: 0.5, z: 8.4784775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4371730979354776}
@@ -924,10 +924,9 @@ MonoBehaviour:
   - {fileID: 172614, guid: 0347f162c7ebeae4ea35eeec8f638c1b, type: 2}
   - {fileID: 146748, guid: 729e3d6ea7dadb643b75250bfc7f3247, type: 2}
   - {fileID: 112512, guid: 3b154cb7750ef3c42b1e5dc77466bc12, type: 2}
-  - {fileID: 182652, guid: 9dd9a25e700331c49974a0f3912e39ee, type: 2}
+  - {fileID: 129214, guid: 774560fb0921a884481fd39ada4691ad, type: 2}
   - {fileID: 198412, guid: 713398a148e185840a055a02d77722cf, type: 2}
   - {fileID: 141060, guid: e528638b87d6bc4409383e4c1e073f0a, type: 2}
-  - {fileID: 129214, guid: 774560fb0921a884481fd39ada4691ad, type: 2}
   HealthMode: 0
   ExplosionScale: 2
   isShield: 0

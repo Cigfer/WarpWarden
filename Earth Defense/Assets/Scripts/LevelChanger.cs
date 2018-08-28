@@ -33,6 +33,11 @@ public class LevelChanger : MonoBehaviour {
         {
             fader.SetActive(true);
         }
+
+        if (sceneName == "WinScreen")
+        {
+            Cursor.visible = true;
+        }
        
         Button playB = playButton.GetComponent<Button>();
         //Button backToM = backToMainMenu.GetComponent<Button>();

@@ -22,7 +22,7 @@ public class P_Controller : MonoBehaviour {
         }
 
         //Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
+        Cursor.visible = false;
     }
 
     void Update()

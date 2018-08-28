@@ -18,6 +18,7 @@ public class PullUpMap : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Cursor.visible = true;
             bigmap.SetActive(true);
             minimap.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
@@ -25,6 +26,7 @@ public class PullUpMap : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            Cursor.visible = false;
             bigmap.SetActive(false);
             minimap.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;

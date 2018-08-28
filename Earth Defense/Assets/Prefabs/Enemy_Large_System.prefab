@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 65367526268616902}
   - component: {fileID: 54655990093846176}
   - component: {fileID: 114378865167796814}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,8 @@ GameObject:
   - component: {fileID: 4100564635699444}
   - component: {fileID: 33196969347993032}
   - component: {fileID: 23662848715515804}
-  m_Layer: 0
+  - component: {fileID: 64172745659896506}
+  m_Layer: 12
   m_Name: Shield (mesh)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +114,7 @@ GameObject:
   - component: {fileID: 65684343966721220}
   - component: {fileID: 54387648267455968}
   - component: {fileID: 114876190310299830}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Shield (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +131,8 @@ GameObject:
   - component: {fileID: 4695975427371400}
   - component: {fileID: 33283747588543616}
   - component: {fileID: 23847963180389088}
-  m_Layer: 0
+  - component: {fileID: 64421818208447612}
+  m_Layer: 12
   m_Name: Shield (mesh) (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +149,8 @@ GameObject:
   - component: {fileID: 4204407342245062}
   - component: {fileID: 33194228577772668}
   - component: {fileID: 23512587849235408}
-  m_Layer: 0
+  - component: {fileID: 64498696629072102}
+  m_Layer: 12
   m_Name: Shield (mesh) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +167,8 @@ GameObject:
   - component: {fileID: 4655106175816310}
   - component: {fileID: 33583171788147914}
   - component: {fileID: 23598305589694230}
-  m_Layer: 0
+  - component: {fileID: 64576092188968448}
+  m_Layer: 12
   m_Name: Shield (mesh) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,10 +208,9 @@ GameObject:
   - component: {fileID: 4409655550310476}
   - component: {fileID: 33398101455383092}
   - component: {fileID: 23866281261765546}
-  - component: {fileID: 65137944797719706}
   - component: {fileID: 54708625330609198}
   - component: {fileID: 114105999373008730}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +245,7 @@ GameObject:
   - component: {fileID: 65772476760393416}
   - component: {fileID: 54451067281766428}
   - component: {fileID: 114778438939715312}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Shield (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +355,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1956333115159718}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.997658, y: 18, z: 34.003986}
+  m_LocalPosition: {x: 42.629135, y: 2, z: 29.10192}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4914993452159412}
@@ -982,6 +985,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!64 &64172745659896506
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593753670155908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: be68c88ada54345459a69d9ae7d08ec0, type: 3}
 --- !u!64 &64186248783113324
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -996,18 +1013,48 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2b6db31196bf6c542906dc1871570e9d, type: 3}
---- !u!65 &65137944797719706
-BoxCollider:
+--- !u!64 &64421818208447612
+MeshCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1929560288925592}
+  m_GameObject: {fileID: 1650684630723280}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: be68c88ada54345459a69d9ae7d08ec0, type: 3}
+--- !u!64 &64498696629072102
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1681446078185702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: be68c88ada54345459a69d9ae7d08ec0, type: 3}
+--- !u!64 &64576092188968448
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842436921150428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: be68c88ada54345459a69d9ae7d08ec0, type: 3}
 --- !u!65 &65150323744113064
 BoxCollider:
   m_ObjectHideFlags: 1

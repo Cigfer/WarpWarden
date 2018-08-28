@@ -74,6 +74,7 @@ public class Target : MonoBehaviour
     {
         Destroy(transform.GetChild(0).gameObject);
     }
+
     /*
     private AudioClip GetRandomClip()
     {
@@ -86,6 +87,7 @@ public class Target : MonoBehaviour
         splosionSource.Play();
     }
     */
+    
 
     void Die()
     {
